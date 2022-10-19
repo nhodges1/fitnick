@@ -4,7 +4,6 @@ import { Box, Stack, Typography } from '@mui/material';
 
 import { exerciseOptions, fetchData } from '../Utils/FetchData';
 import ExerciseCard from './ExerciseCard';
-import { WifiTetheringErrorRoundedTwoTone } from '@mui/icons-material';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -68,7 +67,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             defaultPage={1}
             count={Math.ceil(exercises.length / exercisesPerPage)}
             page={currentPage}
-            onChange={paginate}
+            onChange={paginate }
             size="large"
           />
         )}
