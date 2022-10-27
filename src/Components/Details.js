@@ -3,7 +3,7 @@ import { Typography, Stack, Button } from '@mui/material';
 
 import BodyPartImage from '../Assets/icons/body-part.png';
 import TargetImage from '../Assets/icons/target.png';
-import Equipment from '../Assets/icons/equipment.png';
+import EquipmentImage from '../Assets/icons/equipment.png';
 
 const Details = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
@@ -38,10 +38,12 @@ const Details = ({ exerciseDetail }) => {
           </Typography>
           {extraDetail.map((item) => (
             <Stack key={item.name} direction="row" gap="24px" alignItems="center">
-              <Button>
-                <img src={item.icon} />
+              <Button sx={{ background: 'blue', borderRadius: '50%', width: '100px',
+                height: '100px'}}>
+                <img src={item.icon} alt={bodyPart} style={{ width: '100px',
+                  height: '100px' }}/>
               </Button>
-              <Typography variant="h5">
+              <Typography textTransform="capitalize" variant="h5">
                 {item.name}
               </Typography>
             </Stack>
